@@ -1,0 +1,21 @@
+* {
+ font-family: Arial;
+}
+
+h1 {
+font-size: xxx-large;
+
+}
+
+p, h3, label {
+  color: grey;
+}
+a
+ {
+  color: darkslategrey;
+  text-decoration: none;
+}
+
+body {
+  background-color: gainsboro;
+}
