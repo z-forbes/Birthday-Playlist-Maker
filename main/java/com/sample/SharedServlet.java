@@ -14,44 +14,34 @@ import java.io.IOException;
 
 
 @WebServlet(
-        name = "resultservlet",
-        urlPatterns = "/result"
+        name = "sharedservlet",
+        urlPatterns = "/shared"
 )
-public class ResultServlet extends HttpServlet {
+public class SharedServlet extends HttpServlet {
 
-    private static String date;
-    private static String playlistID = null;
-    private static String code;
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        playlistID = null;
-        date = req.getParameter("Date");
-        String uri = GetUserApproval.mkURI();
-        req.setAttribute("uri", uri);
-        RequestDispatcher view = req.getRequestDispatcher("clickUri.jsp");
-        view.forward(req,resp);
-
-    }
+    public static String shareURL;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String fullQuery = "";
         fullQuery += req.getQueryString();
 
-        if (!fullQuery.contains("code")) {
+        if (!fullQuery.contains("id")) {
             RequestDispatcher view = req.getRequestDispatcher("gohome.jsp");
             view.forward(req, resp);
             return;
         }
 
-        if (playlistID == null) {
-            code = fullQuery.substring(fullQuery.indexOf("=") + 1);
-            playlistID = Go.go(date, code);
+
+        String playlistID = fullQuery.substring(fullQuery.indexOf("=") + 1);
+        String examplePLUri = "76Vro891V9PIJLV6FrRxck";
+        if (playlistID.length() > examplePLUri.length()) {
+            playlistID.substring(0, examplePLUri.length());
         }
 
+        req.setAttribute("shareURL", shareURL);
         req.setAttribute("playlistID", playlistID);
-        RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("shared.jsp");
         view.forward(req, resp);
     }
 

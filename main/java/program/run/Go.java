@@ -1,7 +1,10 @@
 package program.run;
 
+import com.sample.ResultServlet;
+import com.sample.SharedServlet;
 import com.wrapper.spotify.model_objects.credentials.AuthorizationCodeCredentials;
 import com.wrapper.spotify.requests.authorization.authorization_code.AuthorizationCodeRequest;
+import program.GetImageURLForShare;
 import program.GetUserApproval;
 import program.run.addToPlaylist.*;
 import program.run.getData.*;
@@ -26,6 +29,7 @@ public class Go {
             System.out.println(tracksToAdd.size());
             AddToPlaylist.addToPlaylist(api, tracksToAdd, playlistID);
             AlbumCover.setCover(date, api, playlistID);
+            SharedServlet.shareURL = GetImageURLForShare.getImageURL(playlistID);
             return playlistID;
         } catch (Exception e) {
             System.err.println("Something went wrong");

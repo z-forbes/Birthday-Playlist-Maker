@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Birthday Playlist</title>
 </head>
 <body>
 <center>
     <h1>
-        Party Like it's Your Birthday
+        <a href="http://birthday-playlist.us-east-2.elasticbeanstalk.com/" style="color:inherit">Party Like it's Your Birthday</a>
     </h1>
     <h3>
         Ever wanted to know what music people were into when you were born?<br>
-        I sure have, and now you can too. Current winner is 23/8/2000, hmu if yours is better.
+        I sure have, and now you can too.
+    </h3>
+    <h3>
+        This app makes a playlist using data from the UK singles chart and saves it to your Spotify.
     </h3>
     <form method="post" action="result">
         <br>
-        <label for="birthday">What's your bday?</label><br><br>
+        <label for="birthday">When's your birthday?</label><br><br>
         <input name="Date" type="date" id="birthday" min="1952-11-14" required="required">
         <input type="submit" value="Make Playlist">
-        <br><br>
+        <br><br><br>
     </form>
     <script>
         var today = new Date();
@@ -46,14 +50,13 @@ document.getElementById("birthday").setAttribute("max", today);
         <a class="twitter-timeline" data-width="350" data-height="400" data-theme="dark" href="https://twitter.com/tunes_of_lew?ref_src=twsrc%5Etfw">Tweets by tunes_of_lew</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <br><br><br>
-    <h2>Hefty merci to</h2>
+    <h2 style="font-size:x-large">Hefty merci to</h2>
     <a href="https://www.officialcharts.com/charts/uk-top-40-singles-chart/">The Official Charts</a><br><br>
     <a href="https://github.com/thelinmichael/spotify-web-api-java">thelinmichael on Github</a>
-    <br>
-    <p>Code available on <a href="https://github.com/lewisforbes/Birthday-Playlist-Maker">Github</a></p>
     <div>
         <br><br>
         <p>Made by <a href="https://lewisforbes.com/"> Lewis Forbes</a></p>
+        <p>Code available on <a href="https://github.com/lewisforbes/Birthday-Playlist-Maker">GitHub</a></p>
     </div>
 </center>
 
