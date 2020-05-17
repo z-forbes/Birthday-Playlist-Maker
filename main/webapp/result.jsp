@@ -9,7 +9,7 @@
 <body>
 <center>
 <h1>
-    <a href="http://birthday-playlist.us-east-2.elasticbeanstalk.com/" style="color:inherit">Check your Spotify!</a>
+    <a href="http://lewis-forbes.us-east-2.elasticbeanstalk.com/birthday" style="color:inherit">Check your Spotify!</a>
 </h1>
 <%
 String playlistID = (String) request.getAttribute("playlistID");
@@ -28,7 +28,7 @@ String fancyShareURL = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%
 <iframe src="<%=shareURL %>" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 
 <br><br>
-<a href="http://birthday-playlist.us-east-2.elasticbeanstalk.com/"> <h2>Make Another</h2></a>
+<a href="http://lewis-forbes.us-east-2.elasticbeanstalk.com/birthday"> <h2>Make Another</h2></a>
 
 <br>
  <div>

@@ -16,7 +16,7 @@ String shareURL = (String) request.getAttribute("shareURL");
 <body>
 <center>
 <h1>
-    <a href="http://birthday-playlist.us-east-2.elasticbeanstalk.com/" style="color:inherit">Party Like it's Your Birthday</a>
+    <a href="http://lewis-forbes.us-east-2.elasticbeanstalk.com/birthday" style="color:inherit">Party Like it's Your Birthday</a>
 </h1>
 <%
 String playlistID = (String) request.getAttribute("playlistID");
@@ -28,7 +28,7 @@ String embedSrc = "https://open.spotify.com/embed/playlist/" + playlistID;
 <iframe src="<%= embedSrc %>" width="350" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <div>
 <p>I wonder what yours would look like...</p>
-<a href="http://birthday-playlist.us-east-2.elasticbeanstalk.com/"> <h2>Make Your Own</h2></a>
+<a href="http://lewis-forbes.us-east-2.elasticbeanstalk.com/birthday"> <h2>Make Your Own</h2></a>
 </div>
 <br>
  <div>

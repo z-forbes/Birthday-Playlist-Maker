@@ -1,6 +1,5 @@
 package com.sample;
 
-import program.GetImageURLForShare;
 import program.GetUserApproval;
 import program.run.Go;
 

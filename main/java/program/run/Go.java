@@ -1,6 +1,5 @@
 package program.run;
 
-import com.sample.ResultServlet;
 import com.sample.SharedServlet;
 import com.wrapper.spotify.model_objects.credentials.AuthorizationCodeCredentials;
 import com.wrapper.spotify.requests.authorization.authorization_code.AuthorizationCodeRequest;
