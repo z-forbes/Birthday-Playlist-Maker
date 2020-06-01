@@ -8,11 +8,11 @@ import com.wrapper.spotify.requests.data.users_profile.GetCurrentUsersProfileReq
 
 public class MakeNewPlaylist {
 
-    public static String newPL(SpotifyApi api, String name, String decription) {
+    public static String newPL(SpotifyApi api, String name, String description) {
         CreatePlaylistRequest createPlaylistRequest = api.createPlaylist(getUserID(api), name)
                 .collaborative(false)
                 .public_(true)
-                .description(decription)
+                .description(description)
                 .build();
 
         try {
